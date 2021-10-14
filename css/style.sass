@@ -1,0 +1,418 @@
+@import "slick-less"
+
+=b_a()
+  content: ''
+  position: absolute
+
+=m_a()
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+=flex()
+  display: flex
+  display: -webkit-flex
+
+=j-center()
+  justify-content: center
+  -webkit-justify-content: center
+
+=j-beetween()
+  justify-content: space-between
+  -webkit-justify-content: space-between
+
+=j-space-around()
+  justify-content: space-around
+  -webkit-justify-content: space-around
+
+=j-end()
+  justify-content: flex-end
+  -webkit-justify-content: flex-end
+
+=j-start()
+  justify-content: flex-start
+  -webkit-justify-content: flex-start
+
+=ai-center()
+  align-items: center
+  -webkit-align-items: center
+
+=ai-start()
+  align-items: flex-start
+  -webkit-align-items: flex-start
+
+=ai-end()
+  align-items: flex-end
+  -webkit-align-items: flex-end
+
+=as-center()
+  align-self: center
+  -webkit-align-self: center
+
+=as-end()
+  align-self: flex-end
+  -webkit-align-self: flex-end
+
+=as-start()
+  align-self: flex-start
+  -webkit-align-self: flex-start
+
+=wrap()
+  flex-wrap: wrap
+  -webkit-flex-wrap: wrap
+
+=col()
+  flex-direction: column
+  -webkit-flex-direction: column
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+=box-shadow($box-shadow)
+  -webkit-box-shadow: $box-shadow
+  -moz-box-shadow: $box-shadow
+  box-shadow: $box-shadow
+
+=transform($transform)
+  transform: $transform
+  -webkit-transform: $transform
+  -moz-transform: $transform
+  -ms-transform: $transform
+  -o-transform: $transform
+
+=transition($transition_default)
+  transition: $transition_default
+  -webkit-transition: $transition_default
+  -moz-transition: $transition_default
+  -o-transition: $transition_default
+$transition_default: .3s linear
+
+
+@font-face
+  font-family: 'Montserrat-Light'
+  src: url('../fonts/Montserrat-Light.eot')
+  src: local('Montserrat Light'), local('Montserrat-Light'), url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Light.woff') format('woff'), url('../fonts/Montserrat-Light.ttf') format('truetype')
+  font-weight: 300
+  font-style: normal
+
+$light: 'Montserrat-Light'
+
+@font-face
+  font-family: 'Montserrat-SemiBold'
+  src: url('../fonts/Montserrat-SemiBold.eot')
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-SemiBold.woff') format('woff'), url('../fonts/Montserrat-SemiBold.ttf') format('truetype')
+  font-weight: 600
+  font-style: normal
+$semibold: 'Montserrat-SemiBold'
+
+@font-face
+  font-family: 'Montserrat-Bold'
+  src: url('../fonts/Montserrat-Bold.eot')
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+$bold: 'Montserrat-Bold'
+
+@font-face
+  font-family: 'Montserrat-Regular'
+  src: url('../fonts/Montserrat-Regular.eot')
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+$reg: 'Montserrat-Regular'
+
+@font-face
+  font-family: 'Montserrat-Medium'
+  src: url('../fonts/Montserrat-Medium.eot')
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Medium.woff') format('woff'), url('../fonts/Montserrat-Medium.ttf') format('truetype')
+  font-weight: 500
+  font-style: normal
+$medium: 'Montserrat-Medium'
+
+@font-face
+  font-family: 'Montserrat-ExtraBold'
+  src: url('../fonts/Montserrat-ExtraBold.eot')
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url('../fonts/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-ExtraBold.woff') format('woff'), url('../fonts/Montserrat-ExtraBold.ttf') format('truetype')
+  font-weight: 800
+  font-style: normal
+$extrabold: 'Montserrat-ExtraBold'
+
+@font-face
+  font-family: 'Montserrat-Black'
+  src: url('../fonts/Montserrat-Black.eot')
+  src: local('Montserrat Black'), local('Montserrat-Black'), url('../fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Black.woff') format('woff'), url('../fonts/Montserrat-Black.ttf') format('truetype')
+  font-weight: 900
+  font-style: normal
+$f_blak: 'Montserrat-Black'
+
+$green: #A4CF5E
+$red: #E67F1E
+$orange: #FFAF13
+$text_grey: #868686
+$text_black: #333333
+
+
+/*********************************/
+
+a, button
+  +transition($transition_default)
+
+a
+  text-decoration: none
+
+  &:hover, &:focus
+    text-decoration: underline
+
+button, input, .form_control
+  outline: none
+
+.form_control
+  &:hover, &:focus
+    box-shadow: none
+    outline: none
+
+
+button
+  cursor: pointer
+  &:hover, &:focus
+    +box-shadow(none)
+    outline: none
+
+
+img, video
+  max-width: 100%
+*
+  outline: none
+
+*, *::before, *::after
+  box-sizing: border-box
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+
+
+
+
+.container
+  width: 100%
+  max-width: 1375px
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+
+
+body
+  margin: 0
+  padding: 0
+  background: #fff
+  color: $text_black
+  font-size: 14px
+  line-height: 22px
+  font-family: $medium
+
+
+header
+  background: #B4C322
+
+
+.h_top_row
+  +flex
+  +ai-center
+  +wrap
+  +j-beetween
+  padding: 10px 0
+
+
+.history_orders
+  a
+    +flex
+    +ai-center
+    color: #333
+    text-decoration: none
+    font-size: 14px
+    font-family: $medium
+    line-height: 1.2
+    svg, img
+      margin-right: 15px
+    &:hover, &:focus
+      text-decoration: none
+      svg
+
+        *
+          fill: $red
+      .text
+        color: $red
+        border-bottom: 2px dashed $red
+
+    .text
+      display: inline-block
+      border-bottom: 2px dashed #333333
+
+
+.dropdown_toggle
+  background: none
+  border: 0
+  padding: 0
+
+
+
+.currency
+  +flex
+  +ai-center
+  position: relative
+  > span
+    +flex
+    margin-right: 15px
+
+  .currency_list
+    .currency_current
+      +flex
+      +ai-center
+      position: relative
+      padding-right: 20px
+      &.act
+        &:before
+          //+transform(rotate(180deg))
+      &:before
+        +b_a
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 10px
+        height: 6px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5L9 1' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+      picture
+        +flex
+        margin-right: 10px
+
+
+
+
+
+
+.dropdown_menu
+  display: none
+  position: absolute
+  top: calc(100%  + 10px)
+  right: 0
+  min-width: 300px
+  background: #fff
+  z-index: 99
+  box-shadow: 0 3px 25px rgba(51, 51, 51, 0.12)
+  border-radius: 16px
+  padding: 20px
+  &.open
+    display: block
+
+
+.currency_item
+  position: relative
+  margin-bottom: 12px
+  &:last-child
+    margin-bottom: 0
+  input
+    position: absolute
+    opacity: 0
+    &:checked
+      + label
+        &:before
+          border: 2px solid $orange
+
+        &:after
+          opacity: 1
+    + label
+      position: relative
+      +flex
+      +ai-center
+      padding-right: 30px
+      cursor: pointer
+      &:before
+        +b_a
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        border: 2px solid #D5D8DC
+      &:after
+        +b_a
+        right: 4px
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 12px
+        height: 12px
+        background: $orange
+        border-radius: 50%
+        opacity: 0
+      picture
+        +flex
+        margin-right: 10px
+      .text
+        color: $text_black
+        font-size: 16px
+        text-transform: uppercase
+        font-family: $medium
+        span
+          display: block
+          font-size: 12px
+          color: $text_grey
+          text-transform: initial
+
+
+
+.h_bottom_row
+  +flex
+  +ai-center
+  +j-beetween
+  padding: 0 0 20px
+
+
+.main_menu
+  .nav
+    +flex
+    +wrap
+    +ai-center
+    background: #fff
+    box-shadow: 1px 1px 25px rgba(121, 154, 67, 0.5)
+    border-radius: 30px
+    padding: 0 22px
+    li
+      padding: 0 22px
+      a
+        display: inline-block
+        padding: 14px 0
+        text-decoration: none
+        position: relative
+
+        &:before
+          +b_a
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 3px
+          border-radius: 2px
+          background: $orange
+          +transition($transition_default)
+          opacity: 0
+
+        &:hover, &:focus, &.active
+          &:before
+            opacity: 1
+
+
+.m_right
+  +flex
+  +ai-center
+
