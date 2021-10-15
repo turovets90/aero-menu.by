@@ -1,5 +1,16 @@
 $(document).ready(function(){
 
+    $('.hamburger').click(function () {
+        $('.main_menu').toggleClass('open');
+        $('html').toggleClass('page-noscroll');
+
+        $('.main_menu .mm_close').click(function () {
+            $('.main_menu').removeClass('open');
+            $('html').removeClass('page-noscroll');
+        });
+        return false;
+    });
+
 
     $('.dropdown_toggle').each(function(){
         var toggler=$(this);
@@ -7,8 +18,42 @@ $(document).ready(function(){
         $(toggler).click(function(){
             $(toggler).toggleClass('act');
             $(toggler_next).toggleClass('open');
+            return false;
         });
 
+    });
+
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest(".dropdown_menu.open").length) {
+            $(".dropdown_menu.open").removeClass('open');
+            //$("html").removeClass('page-noscroll');
+        }
+        e.stopPropagation();
+    });
+
+    $('.mm_toggler').each(function(){
+        var mm_toggler=$(this);
+        var mm_toggler_next=$(mm_toggler).next();
+        var mm_toggler_next_back=$(mm_toggler_next).find('.back');
+        $(mm_toggler).click(function (){
+            $(mm_toggler_next).toggleClass('active');
+        });
+        $(mm_toggler_next_back).click(function(){
+            $(mm_toggler_next).removeClass('active');
+        });
+    });
+
+    $('.tabs li ').each(function(){
+        var tab_link=$(this).index();
+        var tab_content=$('.tabs_content .tabs_content_item').index();
+        console.log(tab_link);
+        $(this).click(function(){
+            console.log(tab_link);
+            $('.tabs li ').removeClass('act');
+            $('.tabs_content .tabs_content_item').removeClass('active');
+            $(this).addClass('act');
+            $('.tabs_content .tabs_content_item').eq(tab_link).addClass('active');
+        });
     });
 
 

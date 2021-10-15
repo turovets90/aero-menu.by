@@ -223,12 +223,6 @@ header
   background: #B4C322
 
 
-.h_top_row
-  +flex
-  +ai-center
-  +wrap
-  +j-beetween
-  padding: 10px 0
 
 
 .history_orders
@@ -268,6 +262,8 @@ header
   +flex
   +ai-center
   position: relative
+  @media (min-width: 992px)
+    z-index: 999
   > span
     +flex
     margin-right: 15px
@@ -377,24 +373,77 @@ header
   +ai-center
   +j-beetween
   padding: 0 0 20px
+  @media (max-width: 991px)
+    padding: 0
 
 
 .main_menu
+  @media (max-width: 991px)
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    overflow: auto
+    background: #fff
+    z-index: 9999
+    padding-top: 70px
+    +transition($transition_default)
+    opacity: 0
+    +transform(translateX(100%))
+    &.open
+      opacity: 1
+      +transform(translateX(0))
+
+
+  .mm_close
+    @media (min-width: 992px)
+      display: none
+
+    position: absolute
+    top: 25px
+    left: 15px
+    cursor: pointer
+
+
+
   .nav
     +flex
     +wrap
     +ai-center
     background: #fff
-    box-shadow: 1px 1px 25px rgba(121, 154, 67, 0.5)
-    border-radius: 30px
-    padding: 0 22px
+    @media (min-width: 992px)
+      box-shadow: 1px 1px 25px rgba(121, 154, 67, 0.5)
+      border-radius: 30px
+      padding: 0 22px
+    @media (max-width: 1400px)
+      padding: 0 15px
+    @media (max-width: 1100px)
+      padding: 0 8px
+    @media (max-width: 991px)
+      padding: 10px 0
+
+
     li
       padding: 0 22px
+      @media (max-width: 1400px)
+        padding: 0 15px
+      @media (max-width: 1100px)
+        padding: 0 8px
+      @media (max-width: 991px)
+        width: 100%
       a
         display: inline-block
         padding: 14px 0
         text-decoration: none
         position: relative
+        color: #333
+        @media (max-width: 991px)
+          font-family: $semibold
+          font-size: 18px
+
 
         &:before
           +b_a
@@ -412,7 +461,289 @@ header
             opacity: 1
 
 
+.mm_toggler
+  cursor: pointer
+
+.mm_header
+  border-top: 1px solid #D6D8DC
+  border-bottom: 1px solid #D6D8DC
+  height: 50px
+  +flex
+  +ai-center
+  padding-left: 15px
+  @media (min-width: 992px)
+    display: none
+
+.mm_account
+  +flex
+  +ai-center
+  picture
+    display: inline-block
+    margin-right: 15px
+
+
+.mm_footer
+  border-top: 1px solid #D6D8DC
+  padding: 30px 15px
+  @media (min-width: 992px)
+    display: none
+  .history_orders
+    margin-bottom: 30px
+  .currency_list
+    width: 100%
+    .currency_current
+      +flex
+      &:before
+        width: 8px
+        height: 14px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 13L7 7L1 0.999999' stroke='%23868686' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+.mm_slide
+  position: fixed
+  z-index: 2
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  +transition($transition_default)
+  +transform(translateX(100%))
+  opacity: 0
+  background: #fff
+  overflow: auto
+  padding-top: 70px
+  &.active
+    opacity: 1
+    +transform(translateX(0))
+  .mm_slide_body
+    padding: 30px 15px
+    border-top: 1px solid #D6D8DC
+  .back
+    position: absolute
+    top: 24px
+    left: 15px
+    cursor: pointer
+
+
+
+
 .m_right
   +flex
   +ai-center
+  .account
+    margin-right: 30px
+    @media (max-width: 1200px)
+      margin-right: 20px
+    @media (max-width: 1100px)
+      margin-right: 10px
+
+
+
+
+.icon
+  width: 50px
+  height: 50px
+  +border-radius(50%)
+  background: #FFFFFF
+  box-shadow: 1px 0 12px rgba(121, 154, 67, 0.5)
+  +flex
+  +ai-center
+  +j-center
+
+.cart
+  position: relative
+  .count
+    position: absolute
+    top: 0
+    right: -7px
+    box-shadow: 0 0 3px rgba(215, 150, 25, 0.5)
+    background: $orange
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    +flex
+    +ai-center
+    +j-center
+    color: #fff
+    font-size: 12px
+    font-family: $medium
+
+.account_menu
+  position: relative
+  .dropdown_toggle
+    position: relative
+    padding-right: 18px
+    &:before
+      +b_a
+      right: 0
+      top: 0
+      bottom: 0
+      margin: auto
+      width: 10px
+      height: 6px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5L9 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+.mm_btn
+  width: 35px
+  height: 24px
+  +flex
+  .hamburger
+    width: 35px
+    height: 24px
+    background: none
+    border: 0
+    padding: 0
+    position: relative
+    span
+      position: absolute
+      left: 0
+      width: 100%
+      height: 3px
+      border-radius: 2px
+      background: #fff
+      &:nth-child(1)
+        top: 0
+      &:nth-child(2)
+        top: 0
+        bottom: 0
+        margin: auto
+        max-width: 27px
+      &:nth-child(3)
+        bottom: 0
+
+
+  @media (min-width: 992px)
+    display: none
+
+
+
+.h_top_row
+  +flex
+  +ai-center
+  +wrap
+  +j-beetween
+  padding: 10px 0
+  @media (max-width: 991px)
+    padding: 5px 0
+  .cart
+    @media (min-width: 992px)
+      display: none
+
+  .history_orders, .currency
+    @media (max-width: 991px)
+      display: none
+
+
+
+.h_bottom_row
+  .m_right
+    @media (max-width: 991px)
+      display: none
+
+
+.logo
+  img
+    @media (max-width: 991px)
+      max-height: 60px
+
+.pt_0
+  padding-top: 0 !important
+
+.tabs
+  border-bottom: 1px solid #D5D8DC
+  margin-right: -15px
+  margin-left: -15px
+  +flex
+  +ai-center
+
+  li
+    color: #868686
+    font-size: 16px
+    font-family: $medium
+    padding: 0 15px
+    cursor: pointer
+    &.act
+      color: $text_black
+      font-family: $semibold
+      span
+        position: relative
+        display: inline-block
+        padding: 15px 0
+        &:before
+          +b_a
+          width: 100%
+          height: 3px
+          border-right: 2px
+          background: $orange
+          left: 0
+          bottom: 0
+
+
+.tabs_content
+  .tabs_content_item
+    display: none
+    padding: 25px 0
+    &.active
+      display: block
+.custom_form
+  .field
+    margin-bottom: 15px
+  label
+    color: #868686
+    font-size: 16px
+    font-family: $medium
+    margin-bottom: 7px
+    display: block
+    @media (max-width: 991px)
+      font-size: 14px
+  input
+    height: 50px
+    @media (max-width: 991px)
+      height: 40px
+
+
+  .form_control
+    width: 100%
+    background: #F0F1F2
+    border-radius: 4px
+    border: 0
+    padding: 0 20px
+    font-family: $medium
+    @media (max-width: 991px)
+      padding: 0 10px
+.mm_reg, .mm_auth
+  .btn_default
+    max-width: 100%
+    margin-top: 25px
+.btn_default
+  width: 100%
+  max-width: 205px
+  height: 50px
+  border-radius: 25px
+  background: $orange
+  color: #fff
+  border: 0
+  +flex
+  +ai-center
+  +j-center
+  font-size: 16px
+  font-family: $medium
+
+
+.social_reg
+  +flex
+  +ai-center
+  margin-bottom: 15px
+  > span
+    color: $text_grey
+    font-family: $medium
+    font-size: 14px
+    margin-right: 25px
+  .social_list
+    +flex
+    +ai-center
+    li
+      + li
+        margin-left: 10px
 
