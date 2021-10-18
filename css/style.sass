@@ -552,6 +552,10 @@ header
 
 .cart
   position: relative
+  cursor: pointer
+  text-decoration: none
+  &:hover, &:focus
+    text-decoration: none
   .count
     position: absolute
     top: 0
@@ -729,6 +733,90 @@ header
   +j-center
   font-size: 16px
   font-family: $medium
+  &:hover, &:focus
+    text-decoration: none
+  &.departure
+    border-radius: 30px
+    border: 2px solid #fff
+    height: 60px
+    max-width: 250px
+    @media (max-width: 991px)
+      max-width: 240px
+    @media (min-width: 992px)
+      margin-right: 30px
+    &:hover, &:focus
+      &:hover, &:focus
+
+        background: #fff
+        span
+          color: #333
+        svg
+          *
+            fill: #333
+    @media (max-width: 1200px)
+      height: 50px
+    span
+      font-size: 14px
+    picture
+      display: inline-block
+      margin-right: 15px
+
+  &.arrival
+    border-radius: 30px
+    border: 2px solid #fff
+    background: #fff
+    height: 60px
+    max-width: 250px
+    @media (max-width: 991px)
+      max-width: 240px
+    &:hover, &:focus
+      border: 2px solid  $orange
+      background: $orange
+      span
+        color: #fff
+      svg
+        *
+          fill: #fff
+    @media (max-width: 1200px)
+      height: 50px
+    span
+      font-size: 14px
+      color: #333
+    picture
+      display: inline-block
+      margin-right: 15px
+
+  &.show_more
+    max-width: 216px
+    height: 54px
+    +border-radius(27px)
+    background: none
+    border: 2px solid $orange
+    color: #333
+    margin: auto
+    font-size: 14px
+    &:hover, &:focus
+      color: #fff
+      background: $orange
+      span
+        &:before
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='15' viewBox='0 0 14 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 14L7 1M7 14L1 8.15M7 14L13 8.15' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+    span
+      position: relative
+      padding-right: 30px
+      &:before
+        +b_a
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 14px
+        height: 15px
+        +transition($transition_default)
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='15' viewBox='0 0 14 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 14L7 1M7 14L1 8.15M7 14L13 8.15' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+
 
 
 .social_reg
@@ -746,4 +834,363 @@ header
     li
       + li
         margin-left: 10px
+
+
+
+.home
+  header
+    position: fixed
+    width: 100%
+    left: 0
+    top: 0
+    z-index: 99
+
+
+.first_screen
+  position: relative
+  background: url(../img/home_banner.png) center
+  background-size: cover
+  width: 100%
+  height: 100vh
+  @media (max-width: 575px)
+    background: url(../img/home_banner_mobile.png)
+    background-size: cover
+
+  .container
+    height: 100%
+    +flex
+    +ai-end
+    +j-center
+    padding-bottom: 15.8%
+    @media (max-width: 991px)
+      +ai-center
+
+    .first_screen_content
+      .h1
+        color: #fff
+        font-size: 48px
+        line-height: 1.2
+        font-family: $semibold
+        text-align: center
+        margin-bottom: 50px
+
+        @media (max-width: 1200px)
+          font-size: 40px
+        @media (max-width: 991px)
+          font-size: 32px
+          font-family: $bold
+          line-height: 48px
+          margin-bottom: 40px
+
+      .btn_group
+        +flex
+        +j-center
+        +ai-center
+        +wrap
+        @media (max-width: 991px)
+          +col
+          .btn_default
+            margin-bottom: 25px
+
+
+
+.box_title
+  text-align: center
+  color: #333
+  font-size: 38px
+  line-height: 1.2
+  font-family: $semibold
+  padding-top: 95px
+  margin-bottom: 70px
+  @media (max-width: 991px)
+    font-size: 26px
+    line-height: 40px
+    padding-top: 62px
+    margin-bottom: 50px
+
+  span
+    display: inline-block
+    position: relative
+    z-index: 1
+    &:before
+      +b_a
+      right: -18px
+      top: 4px
+      background: $green
+      +border-radius(24px 20px 24px 0px)
+      width: 30px
+      height: 30px
+      z-index: -1
+
+strong, b
+  font-family: $semibold
+
+.get_order
+  overflow: hidden
+  @media (max-width: 991px)
+    background: url(../img/group467.png) no-repeat right bottom
+  .container
+    position: relative
+    padding-bottom: 35px
+    @media (max-width: 991px)
+      padding-bottom: 25px
+  .box_title
+    margin-bottom: 110px
+    z-index: 2
+    @media (max-width: 991px)
+      margin-bottom: 40px
+  img
+    position: absolute
+    bottom: -33px
+    right: 0
+    @media (max-width: 991px)
+      display: none
+  .get_order_list
+    z-index: 2
+    position: relative
+    +flex
+    +wrap
+    max-width: 50%
+    @media (max-width: 991px)
+      max-width: 100%
+
+    .item
+      width: 50%
+      +flex
+      +ai-center
+      margin-bottom: 50px
+      @media (max-width: 991px)
+        width: 100%
+        margin-bottom: 40px
+
+      @media (max-width: 767px)
+        width: 100%
+      .count
+        +flex
+        +ai-center
+        +j-center
+        width: 48px
+        height: 48px
+        background: $green
+        +border-radius(15px 0)
+        color: #fff
+        font-size: 24px
+        font-family: $semibold
+        margin-right: 25px
+        @media (max-width: 1200px)
+          margin-right: 20px
+        @media (max-width: 991px)
+          margin-right: 15px
+          width: 40px
+          +border-radius(24px 0)
+      .text
+        strong
+          display: block
+          font-size: 16px
+          line-height: 22px
+          margin-bottom: 5px
+          @media (max-width: 991px)
+            font-size: 18px
+
+        span
+          display: block
+          color: $text_grey
+          font-size: 14px
+          font-family: $medium
+
+
+.ai_center
+  +flex
+  +ai-center
+
+
+.dishes
+  background: #F8F8F8
+  padding-bottom: 65px
+
+.dishes_list
+  +flex
+  +wrap
+  margin-right: -12px
+  margin-left: -12px
+  margin-bottom: 30px
+  @media (max-width: 1200px)
+    margin-bottom: 10px
+  .dishes_list_item
+    width: 25%
+    padding-right: 12px
+    padding-left: 12px
+    @media (max-width: 1200px)
+      width: 33.33%
+      margin-bottom: 30px
+    @media (max-width: 991px)
+      width: 50%
+    @media (max-width: 575px)
+      width: 100%
+    .dishes_list_item_content
+      text-align: center
+      .picture
+        display: inline-block
+        width: 100%
+        height: 224px
+        background-size: cover
+        background-position: center
+        +border-radius(16px)
+        margin-bottom: 8px
+      .dishes_name
+        font-size: 18px
+        line-height: 22px
+        color: #333
+        font-family: $semibold
+        text-decoration: none
+        margin-bottom: 8px
+        &:hover, &:focus
+          text-decoration: none
+
+      .kitchen
+        color: $text_grey
+        font-size: 15px
+        font-family: $medium
+
+
+
+
+
+.dishes_slider
+  .slick-arrow
+    top: 110px
+.slick-arrow
+  background: #FFFFFF
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+  +border-radius(50%)
+  width: 50px
+  height: 50px
+  z-index: 2
+  &:hover, &:focus
+    background: $orange
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15)
+  &:before
+    +b_a
+    +m_a
+    width: 11px
+    height: 18px
+
+
+.slick-prev
+  left: -15px
+  &:hover, &:focus
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9 2L2 9L9 16' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  &:before
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9 2L2 9L9 16' stroke='%23898989' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+.slick-next
+  right: -15px
+  &:hover, &:focus
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 16L9 9L2 2' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+  &:before
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 16L9 9L2 2' stroke='%23898989' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+.slick-dots
+  bottom: -60px
+  li
+    width: 12px
+    height: 12px
+    &.slick-active, &:hover
+      button
+        background: $orange
+        border: 1px solid $orange
+    button
+      width: 12px
+      height: 12px
+      background: #EDEEF0
+      border: 1px solid #D5D8DC
+      +border-radius(50%)
+      &:before
+        display: none
+
+footer
+  border-top: 1px solid #D5D8DC
+  background: #EDEEF0
+  padding: 60px 0 50px
+  @media (max-width: 991px)
+    padding: 35px 0 30px
+  .logo
+    text-align: center
+    margin-bottom: 40px
+    @media (max-width: 991px)
+      margin-bottom: 20px
+    img
+      @media (max-width: 991px)
+        max-height: initial
+  .f_row
+    +flex
+    +wrap
+    @media (max-width: 991px)
+      > div
+        &.order_1
+          order: 1
+        &.order_2
+          order: 2
+          margin-bottom: 0
+        &.order_3
+          order: 3
+          margin-bottom: 25px
+        &.order_4
+          order: 4
+          margin-bottom: 10px
+    .col_left
+      width: 80%
+      margin-bottom: 20px
+      @media (max-width: 991px)
+        width: 100%
+
+    .col_right
+      width: 20%
+      text-align: right
+      @media (max-width: 991px)
+        width: 100%
+        text-align: center
+  a
+    color: $green
+    text-decoration: underline
+    &:hover, &:focus
+      text-decoration: none
+      color: $orange
+  p
+    color: $text_grey
+    font-size: 14px
+    line-height: 20px
+    @media (max-width: 991px)
+      text-align: center
+      margin: 0
+  .f_menu
+    +flex
+    +wrap
+    li
+      @media (max-width: 991px)
+        width: 100%
+        text-align: center
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+
+      + li
+        margin-left: 65px
+        @media (max-width: 1200px)
+          margin-left: 50px
+        @media (max-width: 991px)
+          margin-left: 0
+
+      a
+        color: #333
+        font-size: 16px
+        font-family: $medium
+        text-decoration: none
+        &:hover, &:focus
+          text-decoration: none
+          color: $orange
 
