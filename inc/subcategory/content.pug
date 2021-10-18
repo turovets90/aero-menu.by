@@ -1,0 +1,132 @@
+.page_content
+    .container
+        ul.breadcrumb
+            li
+                a(href="#") Главная
+            li
+                a(href="#") Категория
+            li
+                a(href="#") #{page.title}
+
+        .page_row
+            .sidebar
+                .sidebar_content
+                    .filter
+                        form
+                            .filter_mobile_header
+                                div.flex
+                                    .close_filter
+                                    .filter_mobile_title Фильтр
+                                button.btn_reset(type="reset") Сбросить все
+                            .filter_body
+                                -var f_cats=['Салаты','Холодные блюда и закуски','Горячие закуски','Бизнес ланч','Горячие блюда','Шашлык/Гриль','Супы','Паста','Блины','Пироги','Десерты','Напитки','Соусы','Хлеб'];
+                                .filter_item
+                                    .filter_item_title Блюда
+                                    .filter_item_body
+                                        ul
+                                            for f_cats_item , index in f_cats
+                                                li
+                                                    a(href="#")=f_cats_item
+
+                                .filter_item
+                                    -var kitch=['Европейская кухня','Итальянская кухня','Французкая кухня','Белорусская кухня','Русская кухня','Вегетарианская кухня'];
+                                    .filter_item_title Кухня
+                                    .filter_item_body
+                                        .checkbox_list
+                                            for kitch_item,  index in kitch
+                                                 .item
+                                                     .custom_checkbox
+                                                         input(type="checkbox" id="checkbox_" + index + "")
+                                                         label(for="checkbox_" + index + "")=kitch_item
+                                .filter_item.act
+                                    .filter_item_title Цена
+                                    .filter_item_body
+                                        .range_values
+                                            .range
+                                            .tasks_group
+                                                span от
+                                                input.tasks_status1(type="text" value="0")
+                                                span до
+                                                input.tasks_status2(type="text" value="350")
+                                                span BYN
+
+                                .filter_item.act
+                                    .filter_item_title Другие параметры
+                                    .filter_item_body
+                                        .checkbox_list
+                                            -for (var ch1 = 1; ch1 <= 1; ch1++)
+                                               .item
+                                                   .custom_checkbox
+                                                       input(type="checkbox" id="checkbox_1" + ch1 + "")
+                                                       label(for="checkbox_1" + ch1 + "") Подходит для вегетарианцев
+                                .filter_item
+                                    .btn_group
+                                        button.btn_default.btn_fixed(type="submit") Показать
+                                        button.btn_default.reset(type="reset")
+                                            span Сбросить
+
+
+            .content
+                h1.page_title Заказать еду с доставкой
+                -var cats=['Сырники','Салаты','Десерты','Кофе','Блинчики','Паста','Из творога'];
+                .subcats
+                    for s_item, index in cats
+                        .subcats_item
+                            span=s_item
+                .text_right
+                    .show_filter.act
+
+                .products_list
+                    -for(var p=1;p<=9;p++)
+                        .product_item
+                            .product_item_content
+                                .product_item_content_header
+                                    picture
+                                        img(src="img/image33.png" alt="product")
+                                    .d_flex
+                                        .product_name
+                                            a(href="#") Сырники
+                                            .add_wishlist
+                                        .price 16 BYN
+                                    if p===4
+                                        .product_excerpt Глазунья из двух яиц, обжаренные до аппетитной корочки бекон и сосики в сочетании с фасолью в томатном соусе, овощами и румяным тостом
+                                    else
+                                        .product_excerpt Домашние ароматные сырники с клубничным соусом и сметаной
+
+                                .product_item_content_footer
+                                    .col
+                                        .btn_group
+                                            a.btn_default.border(href="#") Буду есть
+                                            a.btn_default(href="#") Заказать
+                                    .col
+                                        .add_wishlist
+                                        .price 16 BYN
+
+                .pagination
+                    ul.nav
+                        li
+                            a.page_prev(href="#")
+                        li
+                            a.active(href="#") 1
+                        li
+                            a(href="#") 2
+                        li
+                            a(href="#") 3
+                        li
+                            a(href="#") 4
+                        li
+                            a(href="#") 5
+                        li
+                            a.page_next(href="#")
+
+        .page_desc
+
+            .box_title
+                span Описание
+            .desc
+                p Познакомьтесь с предложением кафе Prime Time , для гурманов и тех, кто предпочитает свободу выбора .
+
+                p Сделайте заказ на сайте www.aero-menu.by для доставки выбранных блюд. Сотрудники ресторана передадут Вам Ваш заказ прямо у выхода на посадку либо по прилету. Согласитесь удобно !? Оплачивайте заказ банковской картой или оформляйте за мили . Для Вас нет минимальной суммы заказа и дополнительной оплаты за доставку. Оформляйте заказ и получите стильную упаковку с Вашим персональным гастрономическим набором . Еда меню On-Air прошла тестирование в воздухе , это значит , что благодаря многоступенчатым дегустациям и тщательному отбору , созданы блюда точно отвечающие восприятию вкусовых рецепторов на высоте. Приятного аппетита .
+
+
+
