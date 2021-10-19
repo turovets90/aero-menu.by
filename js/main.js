@@ -98,6 +98,31 @@ $(document).ready(function(){
     });
 
 
+    $('.amount .down').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('.amount .up').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+    });
+
+
+    if($('.product_slider .item').length > 1){
+        $('.product_slider').slick({
+            autoplay: false,
+            dots: false,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+    }
 
 
 

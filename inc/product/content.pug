@@ -1,0 +1,47 @@
+.page_content.mp_0
+    .container
+        ul.breadcrumb
+            li
+                a(href="#") Главная
+            li
+                a(href="#") Категория
+            li
+                a(href="#") Подкатегория
+            li
+                a(href="#") #{page.title}
+
+        .product_content
+            .product_row
+                .col_left
+                    .product_slider
+                        -for(var p=1;p<=3;p++)
+                            .item
+                                a(href="img/image35.png" data-fancybox="product_gallery")
+                                    img(src="img/image35.png")
+                .col_right
+                    .product_info
+                        .product_box_title
+                            h1.product_title Блинчики с рикоттой
+                            .add_wishlist
+
+                        .product_excerpt Нежные блинчики с традиционным итальянским сыром “Рикотта”
+                        .product_option 280 / 50 г - 240 ккал
+
+                        .amount_price
+                            .amount
+                                span.down
+                                input(type="text" value="1")
+                                span.up
+
+                            .price 32 BYN
+
+                        .btn_group
+                            a.btn_default(href="#") Заказать
+                            a.btn_default.border(href="#") Буду есть
+
+
+
+
+
+
+
