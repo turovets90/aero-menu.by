@@ -1,0 +1,37 @@
+.page_content.mp_0
+    .container
+        ul.breadcrumb
+            li
+                a(href="#") Главная
+
+            li
+                a(href="#") #{page.title}
+
+        .fullwidth_content
+            h1.page_title #{page.title}
+
+            a.btn_default( data-fancybox="add_to_cart" data-src="#add_to_cart" href="javascript:;") В корзину
+
+            .modal#add_to_cart
+                .modal_header
+                    .h1 Добавлено в корзину
+                .modal_body
+                    .modal_product_list
+                        -for(var mp=1;mp<=2;mp++)
+                            .item
+                                .product_info
+                                    a(href="#" class="picture")
+                                        img(src="img/image_35.png")
+                                    a.product_name(href="#") Блинчики с рикоттой
+                                img(src="img/check.svg")
+                .modal_footer
+                    a.btn_default(href="#") Продолжить покупки
+                    a.btn_default.border(href="#") В корзину
+
+
+
+
+
+
+
+
