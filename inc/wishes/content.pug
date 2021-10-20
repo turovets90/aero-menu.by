@@ -1,0 +1,46 @@
+.page_content.mp_0
+    .container
+        ul.breadcrumb
+            li
+                a(href="#") Главная
+
+            li
+                a(href="#") #{page.title}
+
+        .fullwidth_content
+            h1.page_title #{page.title}
+
+            .feedback
+                .h1.title Ваши пожелания
+                .sub_title Укажите в форме ниже Ваши пожелания и мы учтем их при заказе
+                form.custom_form
+                    .feedback_form_row
+                        .col_left
+                            .field
+                                label Имя
+                                input.form_control(type="text" required)
+                            .field
+                                label Номер телефона
+                                input.form_control(type="tel" required)
+                            .field
+                                label E-mail
+                                input.form_control(type="email" required)
+
+                        .col_center
+                            .field
+                                label Укажите Ваше пожелание
+                                textarea.form_control
+                        .col_right
+
+                            .custom_checkbox
+                                input(type="checkbox" id="agree" checked)
+                                label(for="agree") Согласен на обраотку персональных данных
+                            button.btn_default(type="submit") Отправить
+
+
+
+
+
+
+
+

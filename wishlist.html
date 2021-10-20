@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Любимое</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="shortcut icon" href="img/favicon.png"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="h_top_row">
+          <div class="mm_btn">
+            <button class="hamburger"><span></span><span></span><span></span></button>
+          </div>
+          <div class="history_orders"><a href="#">
+              <picture><svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.06198 14.0206C2.94244 7.96043 8.2394 3.40466 13.7778 3.29112C19.0889 3.19177 24.8261 7.40692 25.948 14.0206C26.2462 14.0206 26.5444 14.0206 26.8427 14.0206C27.8225 14.049 28.2912 14.8154 27.8083 15.6811C26.658 17.7674 24.9113 19.1441 22.5824 19.7118C21.9291 19.8679 21.2333 19.9672 20.5516 19.9672C16.1919 19.9956 11.8464 20.024 7.48675 19.9672C4.29153 19.9246 1.82056 18.5338 0.244255 15.6953C-0.309583 14.7018 0.102245 14.049 1.23832 14.0348C1.50814 14.0206 1.76376 14.0206 2.06198 14.0206ZM4.16372 13.9638C10.753 13.9638 17.2996 13.9638 23.8321 13.9638C23.5764 10.5718 19.657 5.26386 13.863 5.30644C8.353 5.34902 4.34833 10.6002 4.16372 13.9638ZM2.91404 15.9933C4.20632 17.3132 5.65482 17.9661 7.31633 17.9803C11.7612 18.0229 16.2203 18.0229 20.6652 17.9803C22.341 17.9661 23.8037 17.3132 25.0533 15.9933C17.6404 15.9933 10.3411 15.9933 2.91404 15.9933Z" fill="#333333"/>
+<path d="M13.9623 1.97123C13.6499 1.97123 13.3517 1.97123 13.0393 1.97123C12.4144 1.97123 12.0594 1.68739 12.031 1.04873C12.0026 0.410067 12.3292 0.0552567 12.9541 0.0268718C13.6357 -0.0157055 14.3316 -0.00151304 15.0132 0.0268718C15.6238 0.0552567 15.9647 0.395875 15.9505 1.03453C15.9363 1.64481 15.6096 1.95704 14.9564 1.97123C14.6298 1.98543 14.289 1.97123 13.9623 1.97123Z" fill="#333333"/>
+</svg>
+              </picture><span class="text">История заказов</span></a></div>
+          <div class="logo"><a href="#"><img src="img/logo.png"/></a></div>
+          <div class="currency"><span>Валюта:</span>
+            <ul class="currency_list">
+              <li>
+                <button class="dropdown_toggle currency_current">
+                  <picture><img src="img/currency/1.png"/></picture><span class="text">BYN</span>
+                </button>
+                <ul class="dropdown_menu">
+                  <li class="currency_item">
+                    <input type="radio" name="currency" id="currency_1"/>
+                    <label for="currency_1">
+                      <picture><img src="img/currency/1.png"/></picture>
+                      <div class="text">BYN<span>Беллорусский рубль</span></div>
+                    </label>
+                  </li>
+                  <li class="currency_item">
+                    <input type="radio" name="currency" id="currency_2"/>
+                    <label for="currency_2">
+                      <picture><img src="img/currency/2.png"/></picture>
+                      <div class="text">RUB<span>Российский рубль</span></div>
+                    </label>
+                  </li>
+                  <li class="currency_item">
+                    <input type="radio" name="currency" id="currency_3"/>
+                    <label for="currency_3">
+                      <picture><img src="img/currency/3.png"/></picture>
+                      <div class="text">USD<span>Доллар США</span></div>
+                    </label>
+                  </li>
+                  <li class="currency_item">
+                    <input type="radio" name="currency" id="currency_4"/>
+                    <label for="currency_4">
+                      <picture><img src="img/currency/4.png"/></picture>
+                      <div class="text">EUR<span>Евро</span></div>
+                    </label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="cart">
+            <div class="icon"><img src="img/cart.svg"/><span class="count">2</span></div>
+          </div>
+        </div>
+        <div class="h_bottom_row">
+          <div class="main_menu">
+            <div class="mm_close"><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2L21 21" stroke="#898989" stroke-width="3" stroke-linecap="round"/>
+<path d="M21 2L2 21" stroke="#898989" stroke-width="3" stroke-linecap="round"/>
+</svg>
+            </div>
+            <div class="main_menu_container">
+              <div class="mm_header">
+                <div class="mm_toggler mm_account">
+                  <picture><img src="img/user.svg"/></picture><span>Регистрация/Вход</span>
+                </div>
+                <div class="mm_slide">
+                  <div class="back"><svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11H22M2 11L11 2M2 11L11 20" stroke="#898989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </div>
+                  <div class="mm_slide_body pt_0">
+                    <ul class="tabs">
+                      <li class="act"><span>Регистрация</span></li>
+                      <li><span>Вход</span></li>
+                    </ul>
+                    <div class="tabs_content">
+                      <div class="tabs_content_item active">
+                        <div class="mm_reg">
+                          <div class="social_reg"><span>Через соц. сеть:</span>
+                            <ul class="social_list">
+                              <li><a href="#"><img src="img/social/1.png"/></a></li>
+                              <li><a href="#"><img src="img/social/2.png"/></a></li>
+                              <li><a href="#"><img src="img/social/3.png"/></a></li>
+                              <li><a href="#"><img src="img/social/4.png"/></a></li>
+                              <li><a href="#"><img src="img/social/5.png"/></a></li>
+                            </ul>
+                          </div>
+                          <form class="custom_form">
+                            <div class="field">
+                              <label>Имя</label>
+                              <input class="form_control" type="text"/>
+                            </div>
+                            <div class="field">
+                              <label>Номер телефона</label>
+                              <input class="form_control" type="text"/>
+                            </div>
+                            <div class="field">
+                              <label>E-mail</label>
+                              <input class="form_control" type="text"/>
+                            </div>
+                            <div class="field">
+                              <label>Пароль</label>
+                              <input class="form_control" type="text"/>
+                            </div>
+                            <div class="field">
+                              <button class="btn_default" type="submit">Продолжить</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="tabs_content_item">
+                        <div class="mm_auth">
+                          <form class="custom_form">
+                            <div class="field">
+                              <label>Логин</label>
+                              <input class="form_control" type="text"/>
+                            </div>
+                            <div class="field">
+                              <label>Пароль</label>
+                              <input class="form_control" type="text"/>
+                            </div>
+                            <div class="field">
+                              <button class="btn_default" type="submit">Войти</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="nav">
+                <li><a href="#">Как заказать</a></li>
+                <li><a href="#">Меню</a></li>
+                <li><a href="#">Заказать при вылете</a></li>
+                <li><a href="#">Заказать при прилете</a></li>
+                <li><a href="#">Помощь</a></li>
+                <li><a href="#">Пожелания</a></li>
+                <li><a href="#">Новости</a></li>
+              </ul>
+              <div class="mm_footer">
+                <div class="history_orders"><a href="#">
+                    <picture><svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.06198 14.0206C2.94244 7.96043 8.2394 3.40466 13.7778 3.29112C19.0889 3.19177 24.8261 7.40692 25.948 14.0206C26.2462 14.0206 26.5444 14.0206 26.8427 14.0206C27.8225 14.049 28.2912 14.8154 27.8083 15.6811C26.658 17.7674 24.9113 19.1441 22.5824 19.7118C21.9291 19.8679 21.2333 19.9672 20.5516 19.9672C16.1919 19.9956 11.8464 20.024 7.48675 19.9672C4.29153 19.9246 1.82056 18.5338 0.244255 15.6953C-0.309583 14.7018 0.102245 14.049 1.23832 14.0348C1.50814 14.0206 1.76376 14.0206 2.06198 14.0206ZM4.16372 13.9638C10.753 13.9638 17.2996 13.9638 23.8321 13.9638C23.5764 10.5718 19.657 5.26386 13.863 5.30644C8.353 5.34902 4.34833 10.6002 4.16372 13.9638ZM2.91404 15.9933C4.20632 17.3132 5.65482 17.9661 7.31633 17.9803C11.7612 18.0229 16.2203 18.0229 20.6652 17.9803C22.341 17.9661 23.8037 17.3132 25.0533 15.9933C17.6404 15.9933 10.3411 15.9933 2.91404 15.9933Z" fill="#333333"/>
+<path d="M13.9623 1.97123C13.6499 1.97123 13.3517 1.97123 13.0393 1.97123C12.4144 1.97123 12.0594 1.68739 12.031 1.04873C12.0026 0.410067 12.3292 0.0552567 12.9541 0.0268718C13.6357 -0.0157055 14.3316 -0.00151304 15.0132 0.0268718C15.6238 0.0552567 15.9647 0.395875 15.9505 1.03453C15.9363 1.64481 15.6096 1.95704 14.9564 1.97123C14.6298 1.98543 14.289 1.97123 13.9623 1.97123Z" fill="#333333"/>
+</svg>
+                    </picture><span class="text">История заказов</span></a></div>
+                <div class="currency"><span>Валюта:</span>
+                  <ul class="currency_list">
+                    <li>
+                      <div class="mm_toggler currency_current">
+                        <picture><img src="img/currency/1.png"/></picture><span class="text">BYN</span>
+                      </div>
+                      <div class="mm_slide">
+                        <div class="back"><svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11H22M2 11L11 2M2 11L11 20" stroke="#898989" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                        </div>
+                        <div class="mm_slide_body">
+                          <ul>
+                            <li class="currency_item">
+                              <input type="radio" name="currency" id="currency_11"/>
+                              <label for="currency_11">
+                                <picture><img src="img/currency/1.png"/></picture>
+                                <div class="text">BYN<span>Беллорусский рубль</span></div>
+                              </label>
+                            </li>
+                            <li class="currency_item">
+                              <input type="radio" name="currency" id="currency_12"/>
+                              <label for="currency_12">
+                                <picture><img src="img/currency/2.png"/></picture>
+                                <div class="text">RUB<span>Российский рубль</span></div>
+                              </label>
+                            </li>
+                            <li class="currency_item">
+                              <input type="radio" name="currency" id="currency_13"/>
+                              <label for="currency_13">
+                                <picture><img src="img/currency/3.png"/></picture>
+                                <div class="text">USD<span>Доллар США</span></div>
+                              </label>
+                            </li>
+                            <li class="currency_item">
+                              <input type="radio" name="currency" id="currency_14"/>
+                              <label for="currency_14">
+                                <picture><img src="img/currency/4.png"/></picture>
+                                <div class="text">EUR<span>Евро</span></div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m_right">
+            <div class="account">
+              <ul class="account_menu">
+                <li>
+                  <button class="dropdown_toggle">
+                    <div class="icon"><img src="img/user.svg"/></div>
+                  </button>
+                  <ul class="dropdown_menu">
+                    <li><a href="#">Регистрация</a></li>
+                    <li><a href="#">Вход</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><a class="cart" href="#">
+              <div class="icon"><img src="img/cart.svg"/><span class="count">2</span></div></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page_content">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Любимое</a></li>
+        </ul>
+        <div class="fullwidth_content">
+          <h1 class="page_title">Любимое</h1>
+          <div class="products_list">
+            <div class="product_item">
+              <div class="product_item_content">
+                <div class="product_item_content_header">
+                  <picture><img src="img/image33.png" alt="product"/></picture>
+                  <div class="d_flex">
+                    <div class="product_name"><a href="#">Сырники</a>
+                      <div class="add_wishlist"></div>
+                    </div>
+                    <div class="price">16 BYN</div>
+                  </div>
+                  <div class="product_excerpt">Домашние ароматные сырники с клубничным соусом и сметаной</div>
+                </div>
+                <div class="product_item_content_footer">
+                  <div class="col">
+                    <div class="btn_group"><a class="btn_default border" href="#">Буду есть</a><a class="btn_default" href="#">Заказать</a></div>
+                  </div>
+                  <div class="col">
+                    <div class="add_wishlist"></div>
+                    <div class="price">16 BYN</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product_item">
+              <div class="product_item_content">
+                <div class="product_item_content_header">
+                  <picture><img src="img/image33.png" alt="product"/></picture>
+                  <div class="d_flex">
+                    <div class="product_name"><a href="#">Сырники</a>
+                      <div class="add_wishlist"></div>
+                    </div>
+                    <div class="price">16 BYN</div>
+                  </div>
+                  <div class="product_excerpt">Домашние ароматные сырники с клубничным соусом и сметаной</div>
+                </div>
+                <div class="product_item_content_footer">
+                  <div class="col">
+                    <div class="btn_group"><a class="btn_default border" href="#">Буду есть</a><a class="btn_default" href="#">Заказать</a></div>
+                  </div>
+                  <div class="col">
+                    <div class="add_wishlist"></div>
+                    <div class="price">16 BYN</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product_item">
+              <div class="product_item_content">
+                <div class="product_item_content_header">
+                  <picture><img src="img/image33.png" alt="product"/></picture>
+                  <div class="d_flex">
+                    <div class="product_name"><a href="#">Сырники</a>
+                      <div class="add_wishlist"></div>
+                    </div>
+                    <div class="price">16 BYN</div>
+                  </div>
+                  <div class="product_excerpt">Домашние ароматные сырники с клубничным соусом и сметаной</div>
+                </div>
+                <div class="product_item_content_footer">
+                  <div class="col">
+                    <div class="btn_group"><a class="btn_default border" href="#">Буду есть</a><a class="btn_default" href="#">Заказать</a></div>
+                  </div>
+                  <div class="col">
+                    <div class="add_wishlist"></div>
+                    <div class="price">16 BYN</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product_item">
+              <div class="product_item_content">
+                <div class="product_item_content_header">
+                  <picture><img src="img/image33.png" alt="product"/></picture>
+                  <div class="d_flex">
+                    <div class="product_name"><a href="#">Сырники</a>
+                      <div class="add_wishlist"></div>
+                    </div>
+                    <div class="price">16 BYN</div>
+                  </div>
+                  <div class="product_excerpt">Глазунья из двух яиц, обжаренные до аппетитной корочки бекон и сосики в сочетании с фасолью в томатном соусе, овощами и румяным тостом</div>
+                </div>
+                <div class="product_item_content_footer">
+                  <div class="col">
+                    <div class="btn_group"><a class="btn_default border" href="#">Буду есть</a><a class="btn_default" href="#">Заказать</a></div>
+                  </div>
+                  <div class="col">
+                    <div class="add_wishlist"></div>
+                    <div class="price">16 BYN</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="logo"><a href="#"><img src="img/f_logo.png"/></a></div>
+        <div class="f_row">
+          <div class="col_left order_1">
+            <ul class="f_menu">
+              <li><a href="#">Договор публичной оферты</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Помощь</a></li>
+              <li><a href="#">Пожелания</a></li>
+            </ul>
+          </div>
+          <div class="col_right order_4"><a href="#">Все права защищены.</a></div>
+          <div class="col_left order_2">
+            <p>Строки копирайта. Строки. <br>Строки копирайта. Строки копирайта.</p>
+          </div>
+          <div class="col_right order_3">
+            <p>© 2020 ООО Глобал Прайм</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

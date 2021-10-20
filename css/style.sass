@@ -754,16 +754,23 @@ header
     @media (max-width: 991px)
       height: 40px
 
+  textarea.form_control
+    height: 240px
+    padding-top: 15px
+    padding-bottom: 15px
+    @media (max-width: 991px)
+      height: 210px
+
 
   .form_control
     width: 100%
     background: #F0F1F2
     border-radius: 4px
     border: 0
-    padding: 0 20px
+    padding: 5px 20px
     font-family: $medium
     @media (max-width: 991px)
-      padding: 0 10px
+      padding: 5px 10px
 .mm_reg, .mm_auth
   .btn_default
     max-width: 100%
@@ -1472,6 +1479,10 @@ footer
         +flex
         +ai-center
         +j-beetween
+        @media (max-width: 991px)
+          margin-bottom: 15px
+        @media (max-width: 575px)
+          margin-bottom: 8px
         .add_wishlist, .price
           @media (min-width: 992px)
             display: none
@@ -1482,8 +1493,10 @@ footer
         +flex
         +ai-center
         margin-bottom: 15px
+        @media (max-width: 991px)
+          margin-bottom: 0
         @media (max-width: 575px)
-          margin-bottom: 8px
+          //margin-bottom: 8px
 
         a
           text-decoration: none
@@ -1811,10 +1824,12 @@ footer
         width: 18px
         height: 18px
         left: 0
-        top: 0
-        bottom: 0
-        margin: auto
+        top: 2px
+        //bottom: 0
+        //margin: auto
         +border-radius(2px)
+        @media (max-width: 991px)
+          top: 1px
 
 
 .text_right
@@ -2023,4 +2038,104 @@ footer
     img
       margin: auto
 
+
+
+
+.fullwidth_content
+  padding-top: 45px
+  @media (max-width: 1200px)
+    padding-top: 30px
+  @media (max-width: 991px)
+    padding-top: 20px
+  .products_list
+    margin-bottom: 10px
+    .product_item
+      width: 25%
+      @media (max-width: 1200px)
+        width: 33.33%
+      @media (max-width: 767px)
+        width: 50%
+      @media (max-width: 575px)
+        width: 100%
+
+
+
+.feedback
+  background: #fff
+  +border-radius(16px)
+  padding: 50px 100px 30px
+  @media (max-width: 1200px)
+    padding: 40px 30px 20px
+  @media (max-width: 991px)
+    padding: 30px 15px 10px
+    +border-radius(0)
+    margin-right: -15px
+    margin-left: -15px
+  @media (max-width: 767px)
+    padding: 35px 0 50px
+
+  .title
+    text-align: center
+    margin-bottom: 20px
+    @media (max-width: 991px)
+      display: none
+  .sub_title
+    text-align: center
+    color: $text_black
+    font-size: 18px
+    line-height: 22px
+    font-family: $medium
+    margin-bottom: 40px
+
+    @media (max-width: 991px)
+      font-size: 16px
+      line-height: 20px
+      padding: 0 15px
+      margin-bottom: 30px
+    @media (max-width: 767px)
+
+
+.feedback_form_row
+  +flex
+  +wrap
+  > div
+    padding: 0 12px
+  .col_left
+    width: 30%
+    @media (max-width: 991px)
+      width: 100%
+  .col_center
+    width: 50%
+    @media (max-width: 991px)
+      width: 100%
+  .col_right
+    width: 20%
+    +flex
+    +col
+    +j-end
+    padding-bottom: 20px
+    @media (max-width: 991px)
+      width: 100%
+
+  .btn_default
+    max-width: 216px
+    @media (max-width: 991px)
+      margin: auto
+
+  .custom_checkbox
+    margin-bottom: 20px
+
+    input
+      + label
+        line-height: 17px
+  .field
+
+    label
+      display: block
+      color: $text_grey
+      font-size: 16px
+      font-family: $medium
+      padding-left: 5px
+      @media (max-width: 991px)
+        font-size: 14px
 

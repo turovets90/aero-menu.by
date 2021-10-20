@@ -1,0 +1,44 @@
+.page_content
+    .container
+        ul.breadcrumb
+            li
+                a(href="#") Главная
+
+            li
+                a(href="#") #{page.title}
+
+        .fullwidth_content
+            h1.page_title #{page.title}
+
+            .products_list
+                -for (var p = 1; p <= 4; p++)
+                   .product_item
+                       .product_item_content
+                           .product_item_content_header
+                               picture
+                                   img(src="img/image33.png" alt="product")
+                               .d_flex
+                                   .product_name
+                                       a(href="#") Сырники
+                                       .add_wishlist
+                                   .price 16 BYN
+                               if p === 4
+                                   .product_excerpt Глазунья из двух яиц, обжаренные до аппетитной корочки бекон и сосики в сочетании с фасолью в томатном соусе, овощами и румяным тостом
+                               else
+                                   .product_excerpt Домашние ароматные сырники с клубничным соусом и сметаной
+
+                           .product_item_content_footer
+                               .col
+                                   .btn_group
+                                       a.btn_default.border(href="#") Буду есть
+                                       a.btn_default(href="#") Заказать
+                               .col
+                                   .add_wishlist
+                                   .price 16 BYN
+
+
+
+
+
+
+
