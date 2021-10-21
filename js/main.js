@@ -64,21 +64,21 @@ $(document).ready(function(){
 
     $('.range_values').each(function(){
         var range=$(this).find('.range');
-        var tasks_status1=$(this).find('.tasks_status1');
-        var tasks_status2=$(this).find('.tasks_status2');
         $(range).slider({
             range: true,
-            min: 0,
+            min: 5,
             max: 350,
-            values: [0, 150],
+            values: [5, 150],
             sliderValueNoteDisplay: true,
             step: 1,
             slide: function(event, ui) {
-                $(tasks_status1).val( ui.values[0] );
-                $(tasks_status2).val( ui.values[1] );
+                $(range).children("span.ui-slider-handle").first().html('<span class="slider-left-value">' +ui.values[ 0 ]+' BYN</span>');
+                $(range).children("span.ui-slider-handle").last().html('<span class="slider-right-value">' +ui.values[ 1 ]+' BYN</span>');
             }
         });
 
+        $(range).children("span.ui-slider-handle").first().html('<span class="slider-left-value">5 BYN</span>');
+        $(range).children("span.ui-slider-handle").last().html('<span class="slider-right-value">150 BYN</span>');
     });
 
 
